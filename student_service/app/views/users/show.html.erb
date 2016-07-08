@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>My profile</h1>
+			<dl  class="dl-horizontal">
+			  <dt>User name:</dt>
+			  <dd><%= @user.first_name %></dd>
+			  <dt>Surname:</dt>
+			  <dd><%= @user.last_name %></dd>
+			  <dt>Role:</dt>
+			  <dd><%= @user.role %></dd>
+			  <dt>Year:</dt>
+			  <dd><%= @user.year %></dd>
+			  <dt>Department:</dt>
+			  <dd><%= @user.department %></dd>
+			  <dt>Date of birth:</dt>
+			  <dd><%= @user.date_of_birth %></dd>
+			</dl>
+			<p><%= link_to "Destroy", user_path(@user), method: :delete, data: { confirm: "You sure?" } %></p>
+
+			<p class='btn btn-default btn-lg'><%= link_to "Settings", edit_user_path(current_user) %></p>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Subject page</h1>
+			<h2><%= @subject.name %></h2>
+			<p><%= @subject.etcs %></p>
+			<p><%= @subject.year %></p>
+			<% if current_user && admin? %>
+				<p><%= link_to "Edit", [:edit, @subject] %></p>
+				<p><%= link_to "Destroy", subject_path(@subject), method: :delete, data: { confirm: "You sure?" } %></p>
+			<%end%>
+		</div>
+	</div>
+</div>

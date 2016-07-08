@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<% @professors.each do |p| %>
+				<p><%= p.title%> <%= p.first_name %> <%= p.last_name %></p>
+				<p><%= link_to "Show", professor_path(p) %> </p>
+			<% end %>
+		</div>
+	</div>	
+
+</div>

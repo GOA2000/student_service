@@ -1,0 +1,12 @@
+<h1>Comments</h1>
+<ul>	
+	<%= comments.each do |comment| %>
+		<li>
+			<p><%= comment.content %></p>
+			<p><b><%= comment.user.first_name %></b></p>
+			<% if current_user && admin? || comment.user_id == current_user.id %>
+				<p><%= link_to "Destroy", comment_path(comment), method: :delete, data: { confirm: "You sure?" } %></p>
+			<%end%>
+		</li>
+	<%end%>
+</ul>

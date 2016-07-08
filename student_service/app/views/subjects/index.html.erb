@@ -1,0 +1,7 @@
+<h1>List of subjests</h1>
+<ul>
+<% @subjects.each do |subject| %>
+	<li><%= subject.name %>, <%= subject.etcs %>, <%= subject.year %> <%= link_to "Show", subject_path(subject) %></li>
+
+<%end%>
+</ul>
