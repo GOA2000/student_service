@@ -2,8 +2,8 @@
 
 
 TBD:
-Front End
-Spacing
-Code Refactoring
-Comments
+Front End,
+Spacing,
+Code Refactoring,
+Comments,
 Clean up & Optimisation
